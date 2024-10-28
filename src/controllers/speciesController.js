@@ -6,7 +6,7 @@ const store = async (req, res) => {
 
     await Species.create({ name, discoveryLocation, rarity, documented });
 
-    res.sendStatus(204);
+    res.json();
   } catch (error) {
     res.status(500).send(error.message);
   }
